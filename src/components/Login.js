@@ -18,7 +18,7 @@ const Login = () => {
         const json = await response.json()
         console.log(json)
         if(json.success){
-            //redirect
+            //Save the authtoken and redirect
             localStorage.setItem('token',json.authtoken)
             navigate('/')
         }
